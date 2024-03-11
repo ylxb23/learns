@@ -1,6 +1,6 @@
 package junit4s;
 
-import algs.MathOpr;
+import com.zero.learns.algs.MathOpr;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
 package junit5s;
 
-import algs.MathOpr;
+import com.zero.learns.algs.MathOpr;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
