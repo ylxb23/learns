@@ -27,11 +27,13 @@ public class RocketMQConsumerA1Test {
                 System.out.println("current batch msg from queues: " + msgs.stream().map(MessageExt::getQueueId).collect(Collectors.toList()));
                 for(int i=0; i<msgs.size(); i++) {
                     MessageExt msg = msgs.get(i);
+                    String maxOffset = msg.getProperty("MAX_OFFSET");
                     System.out.println("consume msg, topic: " + msg.getTopic() + ", tags: " + msg.getTags() + ", queue id: " + msg.getQueueId() +
+                            ", offset: " + msg.getQueueOffset() + ", max offset: " + maxOffset +
                             ", body: " + new String(msg.getBody()) + ", msg id: " + msg.getMsgId() + ", properties: " + msg.getProperties());
                 }
-//                return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
-                return ConsumeConcurrentlyStatus.RECONSUME_LATER;
+                return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
+//                return ConsumeConcurrentlyStatus.RECONSUME_LATER;
             }
 
         });

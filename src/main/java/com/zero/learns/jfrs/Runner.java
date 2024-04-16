@@ -27,7 +27,7 @@ public class Runner {
         for (int i = 0; ; i++) {
             map.put(i, new ArrayList<>(size));
             try {
-                Thread.sleep(Duration.ofMillis(1));
+                Thread.sleep(10L);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

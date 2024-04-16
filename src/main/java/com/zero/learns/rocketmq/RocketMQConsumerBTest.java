@@ -5,6 +5,7 @@ import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
 import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
 import org.apache.rocketmq.client.exception.MQClientException;
+import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.common.message.MessageExt;
 import org.apache.rocketmq.common.protocol.heartbeat.MessageModel;
 import org.apache.rocketmq.remoting.protocol.LanguageCode;
@@ -25,6 +26,7 @@ public class RocketMQConsumerBTest {
                 for(int i=0; i<msgs.size(); i++) {
                     MessageExt msg = msgs.get(i);
                     System.out.println("consume msg, topic: " + msg.getTopic() + ", tags: " + msg.getTags() + ", queue id: " + msg.getQueueId() +
+                            ", offset: " + msg.getQueueOffset() + ", max offset: " + msg.getProperty("MAX_OFFSET") +
                             ", bron host: " + msg.getBornHostString() + ", msg id: " + msg.getMsgId() + ", properties: " + msg.getProperties() +
                             ", body: " + new String(msg.getBody()));
                 }
