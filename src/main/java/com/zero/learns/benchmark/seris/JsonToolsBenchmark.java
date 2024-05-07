@@ -53,56 +53,56 @@ public class JsonToolsBenchmark {
     // --------- fastjson -----------
     @Benchmark
     @OperationsPerInvocation()
-    public void FastjsonBenchmarkLittlePropertiesSerialize() {
+    public void fastjsonBenchmarkLittlePropertiesSerialize() {
         JSON.toJSONString(littlePropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void FastjsonBenchmarkLittlePropertiesDeserialize() {
+    public void fastjsonBenchmarkLittlePropertiesDeserialize() {
         JSON.parseObject(littleString, LittlePropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void FastjsonBenchmarkElevenPropertiesValueSerialize() {
+    public void fastjsonBenchmarkElevenPropertiesValueSerialize() {
         JSON.toJSONString(elevenPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void FastjsonBenchmarkElevenPropertiesValueDeserialize() {
+    public void fastjsonBenchmarkElevenPropertiesValueDeserialize() {
         JSON.parseObject(elevenString, ElevenPropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void FastjsonBenchmarkElevenDeepPropertiesValueSerialize() {
+    public void fastjsonBenchmarkElevenDeepPropertiesValueSerialize() {
         JSON.toJSONString(elevenDeepPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void FastjsonBenchmarkElevenDeepPropertiesValueDeserialize() {
+    public void fastjsonBenchmarkElevenDeepPropertiesValueDeserialize() {
         JSON.parseObject(elevenDeepString, ElevenDeepPropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void FastjsonBenchmarkHundredPropertiesValueSerialize() {
+    public void fastjsonBenchmarkHundredPropertiesValueSerialize() {
         JSON.toJSONString(hundredPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void FastjsonBenchmarkHundredPropertiesValueDeserialize() {
+    public void fastjsonBenchmarkHundredPropertiesValueDeserialize() {
         JSON.parseObject(hundredString, HundredPropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void FastjsonBenchmarkThousandPropertiesValueSerialize() {
+    public void fastjsonBenchmarkThousandPropertiesValueSerialize() {
         JSON.toJSONString(thousandPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void FastjsonBenchmarkThousandPropertiesValueDeserialize() {
+    public void fastjsonBenchmarkThousandPropertiesValueDeserialize() {
         JSON.parseObject(thousandString, ThousandPropertiesValue.class);
     }
 
@@ -111,168 +111,168 @@ public class JsonToolsBenchmark {
 
     @Benchmark
     @OperationsPerInvocation()
-    public void Fastjson2BenchmarkLittlePropertiesSerialize() {
+    public void fastjson2BenchmarkLittlePropertiesSerialize() {
         com.alibaba.fastjson2.JSON.toJSONString(littlePropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void Fastjson2BenchmarkLittlePropertiesDeserialize() {
+    public void fastjson2BenchmarkLittlePropertiesDeserialize() {
         com.alibaba.fastjson2.JSON.parseObject(littleString, LittlePropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void Fastjson2BenchmarkElevenPropertiesValueSerialize() {
+    public void fastjson2BenchmarkElevenPropertiesValueSerialize() {
         com.alibaba.fastjson2.JSON.toJSONString(elevenPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void Fastjson2BenchmarkElevenPropertiesValueDeserialize() {
+    public void fastjson2BenchmarkElevenPropertiesValueDeserialize() {
         com.alibaba.fastjson2.JSON.parseObject(elevenString, ElevenPropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void Fastjson2BenchmarkElevenDeepPropertiesValueSerialize() {
+    public void fastjson2BenchmarkElevenDeepPropertiesValueSerialize() {
         com.alibaba.fastjson2.JSON.toJSONString(elevenDeepPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void Fastjson2BenchmarkElevenDeepPropertiesValueDeserialize() {
+    public void fastjson2BenchmarkElevenDeepPropertiesValueDeserialize() {
         com.alibaba.fastjson2.JSON.parseObject(elevenDeepString, ElevenDeepPropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void Fastjson2BenchmarkHundredPropertiesValueSerialize() {
+    public void fastjson2BenchmarkHundredPropertiesValueSerialize() {
         com.alibaba.fastjson2.JSON.toJSONString(hundredPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void Fastjson2BenchmarkHundredPropertiesValueDeserialize() {
+    public void fastjson2BenchmarkHundredPropertiesValueDeserialize() {
         com.alibaba.fastjson2.JSON.parseObject(hundredString, HundredPropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void Fastjson2BenchmarkThousandPropertiesValueSerialize() {
+    public void fastjson2BenchmarkThousandPropertiesValueSerialize() {
         com.alibaba.fastjson2.JSON.toJSONString(thousandPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void Fastjson2BenchmarkThousandPropertiesValueDeserialize() {
+    public void fastjson2BenchmarkThousandPropertiesValueDeserialize() {
         com.alibaba.fastjson2.JSON.parseObject(thousandString, ThousandPropertiesValue.class);
     }
     // --------- fastjson2 -----------
     // --------- gson -----------
     @Benchmark
     @OperationsPerInvocation()
-    public void GsonBenchmarkLittlePropertiesSerialize() {
+    public void gsonBenchmarkLittlePropertiesSerialize() {
         gson.toJson(littlePropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void GsonBenchmarkLittlePropertiesDeserialize() {
+    public void gsonBenchmarkLittlePropertiesDeserialize() {
         gson.fromJson(littleString, LittlePropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void GsonBenchmarkElevenPropertiesValueSerialize() {
+    public void gsonBenchmarkElevenPropertiesValueSerialize() {
         gson.toJson(elevenPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void GsonBenchmarkElevenPropertiesValueDeserialize() {
+    public void gsonBenchmarkElevenPropertiesValueDeserialize() {
         gson.fromJson(elevenString, ElevenPropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void GsonBenchmarkElevenDeepPropertiesValueSerialize() {
+    public void gsonBenchmarkElevenDeepPropertiesValueSerialize() {
         gson.toJson(elevenDeepPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void GsonBenchmarkElevenDeepPropertiesValueDeserialize() {
+    public void gsonBenchmarkElevenDeepPropertiesValueDeserialize() {
         gson.fromJson(elevenDeepString, ElevenDeepPropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void GsonBenchmarkHundredPropertiesValueSerialize() {
+    public void gsonBenchmarkHundredPropertiesValueSerialize() {
         gson.toJson(hundredPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void GsonBenchmarkHundredPropertiesValueDeserialize() {
+    public void gsonBenchmarkHundredPropertiesValueDeserialize() {
         gson.fromJson(hundredString, HundredPropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void GsonBenchmarkThousandPropertiesValueSerialize() {
+    public void gsonBenchmarkThousandPropertiesValueSerialize() {
         gson.toJson(thousandPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void GsonBenchmarkThousandPropertiesValueDeserialize() {
+    public void gsonBenchmarkThousandPropertiesValueDeserialize() {
         gson.fromJson(thousandString, ThousandPropertiesValue.class);
     }
     // --------- gson -----------
     // --------- jackson -----------
     @Benchmark
     @OperationsPerInvocation()
-    public void JacksonBenchmarkLittlePropertiesSerialize() throws JsonProcessingException {
+    public void jacksonBenchmarkLittlePropertiesSerialize() throws JsonProcessingException {
         objectMapper.writeValueAsString(littlePropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void JacksonBenchmarkLittlePropertiesDeserialize() throws JsonProcessingException {
+    public void jacksonBenchmarkLittlePropertiesDeserialize() throws JsonProcessingException {
         objectMapper.readValue(littleString, LittlePropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void JacksonBenchmarkElevenPropertiesValueSerialize() throws JsonProcessingException {
+    public void jacksonBenchmarkElevenPropertiesValueSerialize() throws JsonProcessingException {
         objectMapper.writeValueAsString(elevenPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void JacksonBenchmarkElevenPropertiesValueDeserialize() throws JsonProcessingException {
+    public void jacksonBenchmarkElevenPropertiesValueDeserialize() throws JsonProcessingException {
         objectMapper.readValue(elevenString, ElevenPropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void JacksonBenchmarkElevenDeepPropertiesValueSerialize() throws JsonProcessingException {
+    public void jacksonBenchmarkElevenDeepPropertiesValueSerialize() throws JsonProcessingException {
         objectMapper.writeValueAsString(elevenDeepPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void JacksonBenchmarkElevenDeepPropertiesValueDeserialize() throws JsonProcessingException {
+    public void jacksonBenchmarkElevenDeepPropertiesValueDeserialize() throws JsonProcessingException {
         objectMapper.readValue(elevenDeepString, ElevenDeepPropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void JacksonBenchmarkHundredPropertiesValueSerialize() throws JsonProcessingException {
+    public void jacksonBenchmarkHundredPropertiesValueSerialize() throws JsonProcessingException {
         objectMapper.writeValueAsString(hundredPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void JacksonBenchmarkHundredPropertiesValueDeserialize() throws JsonProcessingException {
+    public void jacksonBenchmarkHundredPropertiesValueDeserialize() throws JsonProcessingException {
         objectMapper.readValue(hundredString, HundredPropertiesValue.class);
     }
 
     @Benchmark
     @OperationsPerInvocation()
-    public void JacksonBenchmarkThousandPropertiesValueSerialize() throws JsonProcessingException {
+    public void jacksonBenchmarkThousandPropertiesValueSerialize() throws JsonProcessingException {
         objectMapper.writeValueAsString(thousandPropertiesValue);
     }
     @Benchmark
     @OperationsPerInvocation()
-    public void JacksonBenchmarkThousandPropertiesValueDeserialize() throws JsonProcessingException {
+    public void jacksonBenchmarkThousandPropertiesValueDeserialize() throws JsonProcessingException {
         objectMapper.readValue(thousandString, ThousandPropertiesValue.class);
     }
     // --------- jackson -----------

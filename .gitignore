@@ -4,3 +4,6 @@
 # mvn
 *.class
 target/
+
+# temp for sonar test
+**/sonar/
