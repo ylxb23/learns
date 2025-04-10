@@ -32,6 +32,8 @@ public class RedissonBloomFilterImplement {
         RedissonClient client = Redisson.create(config);
         // 初始化布隆过滤器
         RBloomFilter<String> redissonBloomFilter = client.getBloomFilter("bloom_filter::talking");
+        // 初始化时设置 期望容量 n、允许错误率 k
+        // 哈希槽生成数量 m = - n * ln(k) / (ln2)^2
         redissonBloomFilter.tryInit(EXPECT_INSERTIONS, EXPECT_ERROR_RATE);
 
         redissonBloomFilter.add("Hello world");

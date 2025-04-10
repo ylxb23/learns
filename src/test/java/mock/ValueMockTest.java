@@ -8,13 +8,13 @@ import org.mockito.internal.creation.MockSettingsImpl;
 import org.mockito.internal.stubbing.defaultanswers.ReturnsMocks;
 
 /**
- * com.zero.learns.com.zero.learns.seris.ValueMock
+ * com.zero.learns.ValueMock
  *
  * @author ylxb2
  * @since 2024/1/18 15:49
  */
 
-public class ValueMock {
+public class ValueMockTest {
 
     private ElevenPropertiesValue elevenPropertiesValue;
 
