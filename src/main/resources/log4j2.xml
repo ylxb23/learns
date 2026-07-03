@@ -11,9 +11,9 @@
         <!--日志名称-->
         <property name="LOG_NAME">learns</property>
         <!--日志格式-文件-->
-        <property name="LOG_FORMAT">%d{yyyy-MM-dd HH:mm:ss.SSS} %p %t %X{TRACE_ID} %c[%L] - %m %n</property>
+        <property name="LOG_FORMAT">%d{yyyy-MM-dd HH:mm:ss.SSS} %p %t [%X{TRACE_ID}] %c[%L] - %m %n</property>
         <!--日志格式-控制台-->
-        <property name="LOG_FORMAT_CONSOLE">%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight{%-5level}[%t]%X{TRACE_ID} %highlight{%c{1.}.%M#%L}: %msg%n%throwable</property>
+        <property name="LOG_FORMAT_CONSOLE">%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight{%-5level}[%t][%X{TRACE_ID}] %highlight{%c{1.}.%M#%L}: %msg%n%throwable</property>
         <!--备份目录- 根据年月建立文件夹 -->
         <property name="BACKUP_HOME">${LOG_HOME}/$${date:yyyy-MM}</property>
         <!--备份频率-->

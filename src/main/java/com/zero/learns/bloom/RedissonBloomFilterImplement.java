@@ -23,7 +23,7 @@ public class RedissonBloomFilterImplement {
      */
     private static final Double EXPECT_ERROR_RATE = 0.01;
 
-    private static final String REDIS_ADDRESS = "redis://127.0.0.1:6379";
+    private static final String REDIS_ADDRESS = "redis://192.168.43.167:6379";
 
     public static void main(String[] args) {
         Config config = new Config();
